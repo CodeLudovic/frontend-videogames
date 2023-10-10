@@ -1,0 +1,38 @@
+.container{
+    display: grid;
+    position: relative;
+    width: 100vw;
+    align-items: center;
+    font-family: 'Comfortaa', cursive;
+    font-family: 'Press Start 2P', cursive;
+    align-items: start;
+    justify-items: center;
+    margin-top: 0px;
+    z-index: 1;
+}
+
+span {
+    position: absolute;
+    opacity: 1;
+}
+
+.alexander {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; 
+  background-image: url('../../assets/alexander.jpg');
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+  opacity: 0.1; 
+}
+
+.navbar{
+    display: grid;
+    justify-items: center;
+    margin-top: 10px;
+    height: 100px;
+}

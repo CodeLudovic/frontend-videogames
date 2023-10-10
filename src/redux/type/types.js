@@ -1,0 +1,13 @@
+export const LOAD_VGS = "LOAD_VGS";
+export const ADD_VG = "ADD_VG";
+export const REMOVE_VG = "REMOVE_VG";
+export const ORDER_BY_ASDC = "ORDER_BY_ASDC";
+export const ORDER_BY_RATING = "ORDER_BY_RATING";
+export const FILTER_BY_GENDER = "FILTER_BY_GENDER";
+export const FILTER_BY_SRC = "FILTER_BY_SRC";
+export const ACUMULATION_VGS = "ACUMULATION_VGS";
+export const RESET = "RESET";
+export const SET_GENRES = "SET_GENRES";
+export const ADD_SEARCH = "ADD_SEARCH";
+export const GAMES_SEARCHED = "GAMES_SEARCHED";
+export const SET_CREATED = "SET_CREATED";

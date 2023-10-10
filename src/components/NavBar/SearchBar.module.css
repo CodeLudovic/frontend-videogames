@@ -1,0 +1,49 @@
+.container{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.button_search {
+    font-size: 11px;
+    background-color: #494949;
+    height: 40px;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5)
+}
+
+.button_search:active, .button_search:focus {
+    outline: none;
+}
+
+.button_search:active {
+    background-color: #50215B;
+}
+
+.input_nav {
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    padding: 10px 10px; 
+    font-size: 16px; 
+    box-sizing: border-box;
+    outline:none;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 9px;
+    margin: 0px;
+ }
+ 
+ .nav_link  {
+    text-decoration: none;
+ }
+
+ .nav_link:hover  {
+    text-decoration: none;
+ }
+
+.button_order:active, .button_order:focus {
+    outline: none;
+}
+
+.button_order:active {
+    background-color: #50215B;
+}

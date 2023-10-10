@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Press+Start+2P&display=swap');
+
+* {
+  scrollbar-width: auto;
+  scrollbar-color: rgba(255,255,255,0.2) #ffffff;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+a:active, a:focus {
+  color: white;
+}
+
+a:hover {
+  color: white;
+}
+
+.pagination_content {
+  display: flex;
+  position: fixed;
+  width: 500px;
+  height: 55px;
+  border-radius: 25px;
+  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 3;
+  margin-top: 110px;
+  background-color: rgba(19, 19, 19, 1);
+  align-items: center;
+  align-content: center;
+  justify-items: end;
+  gap: 25px;
+  border: 1px solid #333333;
+  box-shadow: 4px 7px 5px rgba(0, 0, 0, 0.4);
+  transition: opacity 0.3s; 
+  }
+  
+  .pagination_content .hidden {
+    opacity: 0;
+  }
+
+  .hidden {
+    opacity: 0;
+  }
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+ -webkit-text-fill-color: #ffffff;
+ transition: background-color 5000s ease-in-out 0s;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+  color: #ffffff;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+button a {
+  color: #ffffff;
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+}
+button:active{
+  outline: none;
+}
+.App {
+  display: grid;
+  background-attachment: fixed;
+  background: radial-gradient(circle at 50%, #351a53,#19191a 56%, #520060 101.5%, #000000 75%); 
+  background-size: 300% 300%;
+  animation: gradient 15s ease infinite; 
+  color: #ffffff;
+  min-height: 100vh;
+  position: relative;
+  text-align: center;
+  opacity: 1;
+
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
