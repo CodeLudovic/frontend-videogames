@@ -38,7 +38,7 @@ export const SearchBar = ({ setPage, setInput, handlerPartianReset }) => {
 			</div>
 			<div className={style.button_box}>
 				<button className={style.button_search} onClick={handlerSearch}>
-					Buscar
+					Search
 				</button>
 			</div>
 		</div>
