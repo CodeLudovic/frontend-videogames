@@ -23,13 +23,13 @@ export const LandingPage = () => {
 	}, []);
 	return (
 		<div className={style.container}>
-			<span className={style.span}>&lt; Bienvenido a Code{" "}
+			<span className={style.span}>&lt; Welcome to Code{" "}
 				<img
 					src="https://whitebeartech.com.co/logo.png"
 					width={"40px"}
 					height={"40px"}
 				/>
-				Games! /&gt;;</span>
+				Games /&gt;;</span>
 			<div
 				className={`${style.loaderDiv}${
 					loading ? "" : style.loaderDiv_fadeOut
