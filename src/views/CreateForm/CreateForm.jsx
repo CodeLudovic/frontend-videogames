@@ -20,11 +20,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { addVG, paginationVGS, setCreated } from "../../redux/actions/actions";
 import { validate } from "../../helpers/validation";
 import { useNavigate } from "react-router-dom";
-validate;
 /* eslint-disable */
 export const CreateForm = () => {
 	const [backgroundImage, setBackgroundImage] = useState("");
-
+	const [selectedGenres, setSelectedGenres] = useState([]);
+	const [selectedPlatforms, setSelectedPlatforms] = useState([]);
+	const [selectionMade, setSelectionMade] = useState(false);
 	const [genres, setGenres] = useState([]);
 	const [platforms, setPlatforms] = useState([]);
 	const created = useSelector((state) => state.created);
@@ -87,32 +88,48 @@ export const CreateForm = () => {
 
 	const handlePlatformChange = (event) => {
 		const { value, checked } = event.target;
+		let updatedPlatforms = [...form.platforms];
+
 		if (checked) {
-			setForm((prevForm) => ({
-				...prevForm,
-				platforms: [...prevForm.platforms, value],
-			}));
+			updatedPlatforms.push(value);
 		} else {
-			setForm((prevForm) => ({
-				...prevForm,
-				platforms: prevForm.platforms.filter((platform) => platform !== value),
-			}));
+			updatedPlatforms = updatedPlatforms.filter(
+				(platform) => platform !== value
+			);
 		}
+
+		// Actualiza form
+		setForm((prevForm) => ({
+			...prevForm,
+			platforms: updatedPlatforms,
+		}));
 	};
+
+	useEffect(() => {
+		// Validar después de actualizar form
+		const selectionErrors = validate(form);
+		setErrors(selectionErrors);
+		console.log(form);
+		console.log(errors);
+	}, [form]);
 
 	const handleGenreChange = (event) => {
 		const { value, checked } = event.target;
+		let updatedGenres = [...form.genres];
+
 		if (checked) {
-			setForm((prevForm) => ({
-				...prevForm,
-				genres: [...prevForm.genres, value],
-			}));
+			updatedGenres.push(value);
 		} else {
-			setForm((prevForm) => ({
-				...prevForm,
-				genres: prevForm.genres.filter((genre) => genre !== value),
-			}));
+			updatedGenres = updatedGenres.filter((genre) => genre !== value);
 		}
+
+		// Actualiza form
+		setForm((prevForm) => ({
+			...prevForm,
+			genres: updatedGenres,
+		}));
+
+		// No necesitas validar aquí, se hará en el efecto de form
 	};
 	const handleChange = (event) => {
 		const { name, value } = event.target;
@@ -122,9 +139,12 @@ export const CreateForm = () => {
 			[name]: value,
 		});
 		setErrors(validate({ ...form, [name]: value }));
+		handleGenreChange(event);
 		if (Object.keys(errors).length === 0) {
 			dispatch(setCreated(true));
 		}
+		console.log(form);
+		console.log(errors);
 	};
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -157,6 +177,7 @@ export const CreateForm = () => {
 					<div>
 						<label>Name:</label>
 						<br />
+
 						<input
 							id="name"
 							name="name"
@@ -322,3 +343,4 @@ export const CreateForm = () => {
 		</div>
 	);
 };
+
