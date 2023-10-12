@@ -16,7 +16,7 @@ export const LandingPage = () => {
 		setTimeout(() => {
 			setLoading(false);
 			localStorage.setItem("videogames", JSON.stringify(acmvgs));
-		}, 4700);
+		}, 5000);
 		return () => {
 			localStorage.removeItem("videogames");
 		};
