@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { paginationVGS, setAllGenres } from "../../redux/actions/actions";
 import { useDispatch, useSelector } from "react-redux";
+import Logo from "../../assets/logo.png";
 /* eslint-disable*/
 export const LandingPage = () => {
 	const [loading, setLoading] = useState(true);
@@ -25,7 +26,7 @@ export const LandingPage = () => {
 		<div className={style.container}>
 			<span className={style.span}>&lt; Welcome to Code{" "}
 				<img
-					src="https://whitebeartech.com.co/logo.png"
+					src={Logo}
 					width={"40px"}
 					height={"40px"}
 				/>
