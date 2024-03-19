@@ -9,6 +9,7 @@ import {
 	resetVG,
 } from "../../redux/actions/actions";
 import { genresHelper } from "../../helpers/utils";
+import Logo from "../../assets/logo.png"
 import React from "react";
 import { setAllGenres } from "../../redux/actions/actions";
 
