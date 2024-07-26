@@ -95,7 +95,7 @@ export const NavBar = ({ setInput, setPage }) => {
 				<div className={style.logo_banner}>
 					<div>Code</div>
 					<img
-						src="https://whitebeartech.com.co/logo.png"
+						src={Logo}
 						className={style.logoImg}
 					/>
 					<div>Games</div>
